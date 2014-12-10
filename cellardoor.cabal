@@ -1,0 +1,28 @@
+name:                cellardoor
+version:             0.1.0.0
+synopsis:            Script runner to wrap scripts which need to be suid root.
+description:         Runs a script selected from a database of approved scripts.
+                     The idea is for the cellardoor binary to be suid root.
+                     Cellardoor exits with an error if either the database or
+                     the script requested are owned by any non-root user, or
+                     if the script is writable by group or world.
+license:             MIT
+license-file:        LICENSE
+author:              Joseph Veld
+maintainer:          joseph.veld@wmich.edu
+category:            System
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable cellardoor
+  main-is:             cellardoor.hs
+  -- other-modules:
+  -- other-extensions:
+  build-depends:       base >=4.7 && <4.8,
+                       mtl >= 2.2.0,
+                       hsshellscript >= 3.3.0,
+                       HDBC-sqlite3 >= 2.3.0.0,
+                       HDBC >= 2.4.0.0,
+                       unix >= 2.7.0.0
+  -- hs-source-dirs:
+  default-language:    Haskell2010

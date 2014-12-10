@@ -1,0 +1,5 @@
+
+_darcs
+dist
+.cabal-sandbox
+cabal.sandbox.config
