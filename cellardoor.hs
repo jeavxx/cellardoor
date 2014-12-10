@@ -6,7 +6,6 @@ import Control.Monad
 import Control.Monad.Trans          (liftIO)
 import Control.Monad.Reader         (ReaderT, runReaderT, MonadReader, asks)
 import Control.Monad.Except
-import Data.Maybe                   (maybe)
 import System.Exit                  (exitFailure)
 import System.Environment           (getExecutablePath)
 import System.Posix.Files
